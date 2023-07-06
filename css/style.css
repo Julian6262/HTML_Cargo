@@ -75,7 +75,7 @@ header a {
 
 .header__map {
     padding-left: 10px;
-    margin-left: 37px;
+    margin-left: 47px;
     position: relative;
 }
 
@@ -145,4 +145,97 @@ header a {
 
 .title__mouse {
     margin: 140px 0 50px;
+}
+
+
+/*SLIDER*/
+.slider {
+    background-image: linear-gradient(#393F47, #393F47),
+    linear-gradient(#393F47, #393F47);
+    background-size: 39% 100%, 39% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    padding: 160px 0 120px;
+    position: relative;
+}
+
+.slider__line {
+    position: absolute;
+    width: 90px;
+    border: 3px solid #C8A35F;
+    top: 120px;
+}
+
+.slider__item-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__inner {
+    max-width: 911px;
+}
+
+.slider__item-block {
+    max-width: 410px;
+}
+
+.slider__title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+}
+
+.slider__text {
+    line-height: 28px;
+    padding-top: 20px;
+}
+
+.slick-btn {
+    position: absolute;
+    color: #C8A35F;
+    font-size: 16px;
+    border: none;
+    z-index: 100;
+    width: 165px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+.slick-prev {
+    right: -200px;
+    top: 248px;
+    background: url("../img/Arrow1.png") no-repeat left;
+}
+
+.slick-next {
+    right: -200px;
+    top: 0;
+    background: url("../img/Arrow.png") no-repeat right;
+}
+
+.slick-prev:before {
+    content: "НАЗАД";
+    float: right;
+}
+
+.slick-next:before {
+    content: "СЛЕД";
+    float: left;
+}
+
+.slick-prev:before {
+    content: "НАЗАД";
+    float: right;
+}
+
+.slick-next:hover {
+    color: white;
+}
+
+.slick-prev:hover {
+    color: white;
 }
