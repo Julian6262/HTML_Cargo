@@ -21,16 +21,16 @@
 
 <body>
 
-<header>
+<header class="header">
 
     <div class="header__top">
 
         <div class="container">
 
-            <div class="lang">
-                <a href="#">РУС</a>
-                <a class="header__top-lang-middle" href="#">ENG</a>
-                <a href="#">FR</a>
+            <div class="header__lang">
+                <a class="header__lang-item" onclick="chooseLang(1)" href="#">РУС</a>
+                <a class="header__lang-item" onclick="chooseLang(2)" href="#">ENG</a>
+                <a class="header__lang-item" onclick="chooseLang(3)" href="#">FR</a>
             </div>
             <a href="#">8 (800) 123-45-67</a>
             <a href="#">sales@log.ru</a>
@@ -269,7 +269,55 @@
 
 <section class="map">
 
+    <div style="position:relative;overflow:hidden; width:100%; height:100%"><a
+        href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:0;">Москва</a><a
+        href="https://yandex.ru/maps/213/moscow/house/ulitsa_stroiteley_7k1/Z04YcwRlQUcBQFtvfXp5d31lbA==/?ll=37.535826%2C55.686168&utm_medium=mapframe&utm_source=maps&z=17.41"
+        style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a>
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=37.535826%2C55.686168&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY3MTc1MRJB0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0KHRgtGA0L7QuNGC0LXQu9C10LksIDfQujEiCg2wJBZCFaO-XkI%2C&utm_source=main_stripe_big&z=17.41"
+            width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
+
 </section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+
+            <a href="#"><img src="img/logo2.png" alt="..."></a>
+
+            <div class="footer__text">
+                <p>Москва, ул. Строителей, д. 7к1</p>
+                <a href="#">saleska@log.ru</a>
+            </div>
+
+            <div class="footer__text">
+                <a href="#">+7 (811) 341-56-65</a>
+                <a href="#">+7 (811) 351-56-65</a>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+<script>
+
+    let langIndex = 1;
+    chooseLang(langIndex);
+
+    function chooseLang(n) {
+        let i;
+        let lang = document.getElementsByClassName("header__lang-item");
+
+        for (i = 0; i < lang.length; i++) {
+            lang[i].className = lang[i].className.replace(" active", "");
+        }
+        lang[n - 1].className += " active";
+    }
+
+</script>
 
 </body>
 </html>
