@@ -10,7 +10,7 @@ a {
     color: #FFFFFF;
 }
 
-ul. li {
+ul, li {
     list-style: none;
 }
 
@@ -49,13 +49,17 @@ header a {
 }
 
 .header__lang {
-    width: 8%;
     display: flex;
-    justify-content: space-between;
 }
 
 .header__lang a {
     opacity: 50%;
+    padding-right: 10px;
+}
+
+.header__btn-menu {
+    display: none;
+    font-size: 40px;
 }
 
 .header__lang-item.active {
@@ -108,7 +112,7 @@ header a {
     align-items: center;
 }
 
-.header__bottom-right-content {
+.header__menu ul{
     width: 420px;
     text-transform: uppercase;
     display: flex;
